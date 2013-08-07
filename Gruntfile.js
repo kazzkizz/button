@@ -76,10 +76,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
+    grunt.loadTasks('tasks');
+
     // Default task.
     grunt.registerTask('default', ['clean', 'build', 'test', 'release']);
-    grunt.registerTask('build', ['stylus', 'jade']);
     grunt.registerTask('test', ['simplemocha']);
     grunt.registerTask('release', ['cssmin', 'copy']);
+    grunt.registerTask('build', ['rework', 'cssmin']);
 
 };

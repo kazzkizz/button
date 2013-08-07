@@ -1,0 +1,8 @@
+.button,
+.button--quiet {
+  extend: %inline-block, %reset-box-model, %reset-base, %reset-cursor, %ellipsis;
+  text-decoration: none;
+}
+.button--quiet {
+  extend: %reset-quiet;
+}
